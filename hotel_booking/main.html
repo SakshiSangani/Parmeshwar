@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parmeshwar Resort</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="bg-light">
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light px-lg-3 py-lg-1 shadow-sm sticky-top"
+        style="background-color:#f4dfb8 ;">
+        <div class="container-fluid">
+            <a class="navbar-brand me-3 fw-300 fs-3 h-font" href="index.php">
+                <img src="img/logo-hotel.png" class="logo"></a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active me-4" aria-current="page" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" href="rooms.php">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" href="facilities.php">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" href="contact.php">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" href="about.php">About</a>
+                </li>
+            </ul>
+            <div>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-3" data-bs-toggle="modal"
+                        data-bs-target="#RegisterModal">
+                        <i class="bi bi-person-fill"></i>User
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h5 class="modal-title d-flex align-items-center">
+                            <i class="bi bi-person-lines-fill fs-3 me-2"></i>
+                            Register
+                        </h5>
+                        <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                            Note: Your details must match with your ID (Aadhaar card, Passport, Driving license,etc.)
+                            that will be required duirng check-in.
+                        </span>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control shadow-none" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control shadow-none" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone No.</label>
+                            <input type="tel" class="form-control shadow-none" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control shadow-none" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control shadow-none" required />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button type="submit" class="btn btn-dark shadow-none custom-btn">Register</button>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="text-secondary text-decoration-none" data-bs-dismiss="modal"
+                                data-bs-toggle="modal" data-bs-target="#LoginModal">Do you have an account? Login</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h5 class="modal-title d-flex align-items-center">
+                            <i class="bi bi-person-circle fs-3 me-2"></i>User Login
+                        </h5>
+                        <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                            Note: Your details must match with your ID (Aadhaar card, Passport, Driving license,etc.)
+                            that will be required duirng check-in.
+                        </span>
+                        <div class="mb-3">
+                            <label class="form-label">Email address or Phone No.</label>
+                            <input type="text" class="form-control shadow-none">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control shadow-none">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button type="submit" class="btn btn-dark shadow-none custom-btn">Login</button>
+                          
+                           <!-- <a href="#" class="text-secondary text-decoration-none" style="background-color: none;">Forgot Password</a> -->
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Swiper -->
+    <div class="container-fluid px-lg-3 mt-4">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/carousel/IMG_15372.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/carousel/IMG_40905.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/carousel/IMG_55677.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/carousel/IMG_62045.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/carousel/IMG_93127.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/carousel/IMG_99736.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Check availabolity -->
+    <div class="container availability-form">
+        <div class="row">
+            <div class="col-lg-12 bg-white shadow p-4 rounded">
+                <h5 style="text-align:center; margin-bottom:30px;">Check Booking Availability</h5>
+                <form>
+                    <div class="row align-items-end">
+                        <div class="col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight:500;">Check-in</label>
+                            <input type="date" class="form-control shadow-none">
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight:500;">Check-out</label>
+                            <input type="date" class="form-control shadow-none">
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label class="form-label" style="font-weight:500;">Adult</label>
+                            <select class="form-select shadow-none">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label class="form-label" style="font-weight:500;">Children</label>
+                            <select class="form-select shadow-none">
+                                <option selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-1 mb-lg-3 mt-2">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Rooms -->
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold" style="font-family:Castellar;">Our Rooms</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6" style="margin-bottom:20px;">
+                <div class="card border-0 shadow" style="max-width: 350px; margin:auto;">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/rooms/1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/4.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5>Deluxe Room with Breakfast</h5>
+                        <h6 class="mb-4"><i class="bi bi-currency-rupee"></i>4,795 per Night</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i class="fa-solid fa-bed"
+                                    style="margin-right:10px;"></i>King Bed with Blanket</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i
+                                    class="fa-regular fa-eye"></i>Garden View</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i
+                                    class="fa-solid fa-sink"></i>Bathroom</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">Air Conditioning</span>
+                        </div>
+                        <div class="d-flex">
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-bottom:20px;">
+                <div class="card border-0 shadow" style="max-width: 350px; margin:auto;">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/rooms/5.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/6.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/7.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/8.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5>Elite Room with Breakfast</h5>
+                        <h6 class="mb-4"><i class="bi bi-currency-rupee"></i>7,300 per Night</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i class="fa-solid fa-bed"
+                                    style="margin-right:10px;"></i>King Bed with Blanket</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i
+                                    class="fa-regular fa-eye"></i>Mountain/Hill View</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i
+                                    class="fa-solid fa-sink"></i>Bathroom(with Bathtub)</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">Air Conditioning</span>
+                        </div>
+                        <div class="d-flex">
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-bottom:20px;">
+                <div class="card border-0 shadow" style="max-width: 350px; margin:auto;">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/rooms/9.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/10.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/11.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/rooms/12.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5>Suite Room with Breakfast</h5>
+                        <h6 class="mb-4"><i class="bi bi-currency-rupee"></i>9,160 per Night</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i class="fa-solid fa-bed"
+                                    style="margin-right:10px;"></i>King Bed with Blanket</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i
+                                    class="fa-regular fa-eye"></i>Lake View</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap"><i
+                                    class="fa-solid fa-sink"></i>Bathroom(with Bathtub)</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">Air Conditioning</span>
+                        </div>
+                        <div class="d-flex">
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--features-->
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold" style="font-family:Cambria;">Facilities</h2>
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/features/f1.png" alt="">
+            <h6>Wi-Fi</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f2.png" alt="">
+            <h6>Sport room</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f3.png" alt="">
+            <h6>Fitness Centre</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f4.png" alt="">
+            <h6>Swimming Pool</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f5.png" alt="">
+            <h6>Restaurant</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f6.png" alt="">
+            <h6>Security</h6>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <h2 id="contact" style="text-align:center;font-family:Cambria;font-weight:bold;">Get in touch</h2>
+    <section id="contact" class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-box mt-5">
+                    <h6 class="pt-4 mb-4 text-center fw-bold fs-50">Send a Message</h6>
+                    <div class="contact">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control shadow-none" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control shadow-none" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone No.</label>
+                            <input type="tel" class="form-control shadow-none" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control shadow-none" rows="4" required></textarea>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button type="submit" class="btn btn-dark shadow-none custom-btn">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 position-relative">
+                <h2 class="text-right" style="padding-top:150px; text-align:center;">Book Your Holiday Best for relaxed
+                    retreats and cultural encounters</h2>
+                <img src="img/logo-hotel.png" class="img-fluid position-absolute">
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="footer bg-dark text-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase">About Us</h5>
+                    <p style="text-align:justify;">Parmeshwar Resort is a premier destination offering luxurious
+                        accommodations, exceptional service, and stunning surroundings. Escape to paradise and
+                        experience relaxation like never before.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase" style="padding-left:100px;">Quick Links</h5>
+                    <ul class="list-unstyled" style="padding-left:100px;">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Rooms</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Facilities</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase">Contact Us</h5>
+                    <p>
+                        <i class="bi bi-geo-alt-fill"></i> 123, Resort Drive Paradise City, Maharashtra, <br> Pin Code:
+                        400001 <br>India<br>
+                        <i class="bi bi-telephone-fill"></i> +91-98765-43210<br>
+                        <i class="bi bi-envelope-fill"></i> info@parmeshwarresort.com
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-secondary text-center py-2">
+            <p class="mb-0">&copy; 2024 Parmeshwar Resort Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                effect: "fade",
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                }
+            });
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
