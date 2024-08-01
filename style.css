@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+    
+}
+.logo{
+    font-size: 25px;
+    font-weight: 600;
+    font-family:cursive;
+}
+/* nav bar start */
+nav{
+    background-color:  rgb(242, 233, 188);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    
+}
+nav ul{
+    font: medium;
+  font-size: medium;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+    
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav a:hover{
+    background-color: #f0f0f0;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+/* nav bar close */
+
+.sidebar{
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+
+    justify-content: flex-start;
+    
+}
+
+.sidebar li{
+    
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+
+
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+/* color of service into green */
+
+.heading span{
+    text-transform: uppercase;
+    color: rgb(224, 187, 64);
+}
+.heading1{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 3rem;
+    letter-spacing: .4rem;
+}
+/* color of service into green */
+
+.heading1 span{
+    text-transform: uppercase;
+    color: rgb(88, 108, 48);
+}
+/* aboot section start */
+.about{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 0;   
+
+}
+
+.about .content{
+    /* flex: 1.1 45rem; */
+    flex: 1 0 55%;
+}
+
+.about .content p{
+    font-size: 1.9rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+}
+/* aboot section close */
+
+/* hotel section start */
+.hotel{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   
+
+}
+
+.hotel .image{
+    /* position: relative;
+    flex: 1.1.45rem; */
+    flex: 1 0 33%;
+    position: relative;
+    padding-top: 50px;
+}
+
+.hotel .image img{
+   
+    width: 100%;
+}
+
+.hotel .content{
+    /* flex: 1.1 45rem; */
+    flex: 1 0 55%;
+}
+
+
+
+.hotel .content p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+}
+/* hotel section close */
+/* rest section start */
+
+.rest{
+    display: flex;
+    flex-direction: row-reverse; /* Ensures the image is on the right and content is on the left */
+    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 0;   
+
+}
+
+.rest .image{
+    /* position: relative;
+    flex: 1.1.45rem; */
+    flex: 1 0 30%;
+    position: relative;
+    padding-top: 30px;
+}
+
+.rest .image img{
+   
+    width: 100%;
+}
+
+.rest  .content{
+    /* flex: 1.1 45rem; */
+    flex: 1 0 55%;
+}
+
+
+
+.rest  .content p{
+    font-size: 1.7rem;
+    
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+}
+
+/* rest section close */
+
+/* hospital section start */
+.hospital{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+
+}
+
+.hospital .image{
+    /* position: relative;
+    flex: 1.1.45rem; */
+    flex: 1 0 20%;
+    position: relative;
+    padding-top: 54px;
+}
+
+.hospital .image img{
+   
+    width: 100%;
+}
+
+.hospital .content{
+    /* flex: 1.1 45rem; */
+    flex: 1 0 55%;
+}
+
+.hospital .content p{
+    font-size: 1.7rem;
+    
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: justify;
+}
+/* hospital section close */
+
+
+
+/* footer section starts */
+.footer{
+    width: 100vw;
+    background-color: rgb(242, 233, 188);
+    padding: 0%;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:3rem;
+    margin-left: 8%;
+    
+ }
+ 
+ .footer .box-container .box h3{
+    font-size:2.5rem;
+    
+    padding: 1rem 0;
+ }
+
+ .footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+   text-decoration: none;
+    padding: 1rem 0;
+    transition: .3s;
+    color: black;
+ }
+ .footer .box-container .box a i{
+    padding-right: .5rem;
+ 
+ }
+ .footer .box-container .foot a:hover i{
+    padding-right: 2rem;
+ }
+ 
+/* footer section ends */
+/* media queries */
+
+
+
+
+/* @Media(max-width:800px){
+    .hideonmobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .heading{
+        font-size: 3rem;
+        
+    }
+}
+@Media(max-width:400px){
+    .sidebar{
+        width: 100%;;
+    }
+} */
+
+/* Add this to your CSS code */
+
+/* Media queries for responsive design */
+
+/* For screens with a maximum width of 1200px */
+@media (max-width: 1200px) {
+    .about .content {
+      flex: 1 0 60%;
+    }
+    .hotel .content {
+      flex: 1 0 60%;
+    }
+    .rest .content {
+      flex: 1 0 60%;
+    }
+    .hospital .content {
+      flex: 1 0 60%;
+    }
+  }
+  
+  /* For screens with a maximum width of 1000px */
+  @media (max-width: 1000px) {
+    .about .content {
+      flex: 1 0 70%;
+    }
+    .hotel .content {
+      flex: 1 0 70%;
+    }
+    .rest .content {
+      flex: 1 0 70%;
+    }
+    .hospital .content {
+      flex: 1 0 70%;
+    }
+  }
+  
+  /* For screens with a maximum width of 800px */
+  @media (max-width: 800px) {
+    .hideonmobile {
+      display: none;
+    }
+    .menu-button {
+      display: block;
+    }
+    .heading {
+      font-size: 3rem;
+    }
+    .about .content {
+      flex: 1 0 80%;
+    }
+    .hotel .content {
+      flex: 1 0 80%;
+    }
+    .rest .content {
+      flex: 1 0 80%;
+    }
+    .hospital .content {
+      flex: 1 0 80%;
+    }
+  }
+  
+  /* For screens with a maximum width of 600px */
+  @media (max-width: 600px) {
+    .about .content {
+      flex: 1 0 90%;
+    }
+    .hotel .content {
+      flex: 1 0 90%;
+    }
+    .rest .content {
+      flex: 1 0 90%;
+    }
+    .hospital .content {
+      flex: 1 0 90%;
+    }
+  }
+  
+  /* For screens with a maximum width of 400px */
+  @media (max-width: 400px) {
+    .sidebar {
+      width: 100%;
+    }
+    .about .content {
+      flex: 1 0 100%;
+    }
+    .hotel .content {
+      flex: 1 0 100%;
+    }
+    .rest .content {
+      flex: 1 0 100%;
+    }
+    .hospital .content {
+      flex: 1 0 100%;
+    }
+  }
